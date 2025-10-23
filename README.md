@@ -11,14 +11,14 @@ Paper: [arXiv:2505.17656](https://arxiv.org/abs/2505.17656)
 
 ---
 
-## (1) Environment, Data, and Models
+## Environment, Data, and Models
 
-### 1.1 Install
+### Install
 ```bash
 pip install -r requirements.txt
 ````
 
-### 1.2 Download the SCE dataset
+### Download the SCE dataset
 
 * Google Drive (pre-built): **[link](https://drive.google.com/drive/folders/15EPDBtECAMHZfP4Gio8Mj3Io7iUjxiIm?usp=sharing)**
 * Includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
@@ -28,12 +28,12 @@ pip install -r requirements.txt
   * `inconsistent_incorrect.jsonl` contains inconsistent errors.
 
 
-### 1.3 Models
+### Models
 We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it with any other models.
 * **Response model** (produces answers & hidden states):[Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
 * **Verifier model** (provides cross signals via hidden states):[Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
 
-## (2) Quick Start: Cross-Model Probe
+## Quick Start: Cross-Model Probe
 
 Example command (TriviaQA, IE subset):
 
@@ -57,7 +57,7 @@ Typical `--dataset` values:
 
 ---
 
-## (3) What the Cross-Model Probe Does
+## Explanation: What the Cross-Model Probe Does?
 
 1. **Extract hidden states** from for each example from:
    * the **response model** (e.g., Llama-3.1-8B-Instruct), and
