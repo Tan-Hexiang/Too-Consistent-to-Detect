@@ -35,8 +35,6 @@ We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it
 
 ## Quick Start: Cross-Model Probe
 
-Example command (TriviaQA, IE subset):
-
 ```bash
 python3 code/cross-model_probe.py \
   --dataset sciq-ce \
@@ -49,11 +47,6 @@ python3 code/cross-model_probe.py \
   --data_dir /your/data/dir/full-self-consistent-dataset \
   --save_dir /path/you/want/to/save
 ```
-
-Typical `--dataset` values:
-
-* `sciq-ce`, `sciq-ie`
-* `triviaqa-ce`, `triviaqa-ie`
 
 ---
 
@@ -73,7 +66,7 @@ Typical `--dataset` values:
 
 ### Command-Line Arguments
 
-* `--dataset`: Which subset to run on (e.g., `triviaqa-ie`, `sciq-ce`).
+* `--dataset`: Which subset to run on (e.g., `triviaqa-ce`, `sciq-ce`, `triviaqa-ie`, `sciq-ie`).
 * `--data_dir`: Root folder of the downloaded SCE dataset.
 * `--response_model`: Shorthand name (e.g., `llama3.1-8b`).
 * `--response_model_path`: Local path to the response model weights.
