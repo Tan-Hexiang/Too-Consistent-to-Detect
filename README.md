@@ -78,7 +78,7 @@ python3 code/cross-model_probe.py \
 
 ---
 
-## (5) Citation
+## Citation
 
 If you find this work useful, please cite:
 
