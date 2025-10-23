@@ -29,8 +29,7 @@ pip install -r requirements.txt
 
 #### Download the SCE dataset
 
-* Google Drive (pre-built): **[link](https://drive.google.com/drive/folders/15EPDBtECAMHZfP4Gio8Mj3Io7iUjxiIm?usp=sharing)**
-* Includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
+* **[Google Drive](https://drive.google.com/drive/folders/15EPDBtECAMHZfP4Gio8Mj3Io7iUjxiIm?usp=sharing)** includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
 * For each subset (CE / IE), the sample count is **matched** for fair comparison.
   * `correct.jsonl` contains the correct responses.
   * `consistent_incorrect.jsonl` contains self-consistent errors
