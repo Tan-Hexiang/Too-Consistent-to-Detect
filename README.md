@@ -3,10 +3,12 @@
 
 Official code for the **EMNLP 2025 main paper** 📄 ["Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs"](https://arxiv.org/abs/2505.17656)
 
-We reveal a critical problem of LLMs: **Self-consistent errors (SCEs)** 
-> Their frequency stays stable or even **increases** as models scale.  
-> They are **hard to detect** for current error detection methods.
-
+We reveal a critical problem of LLMs, **Self-consistent errors (SCEs)**, where LLMs repeatedly generate the same error.
+- Their frequency stays stable or even **increases** as models scale.  
+- They are **hard to detect** for current error detection methods.
+**This repo provide:**
+- 🧩 Curated dataset of **Self-consistent errors**, and matched correct, inconsistent errors samples.  
+- 🔍 A simple yet effective **cross-model probe** to improve the detection of self-consistent errors.
 
 
 <p align="center">
@@ -14,9 +16,7 @@ We reveal a critical problem of LLMs: **Self-consistent errors (SCEs)**
   <br>
 </p>
 
-**This repo provide:**
-- 🧩 Curated dataset of **Self-consistent errors**, and matched correct, inconsistent errors samples.  
-- 🔍 A simple yet effective **cross-model probe** to improve the detection of self-consistent errors.
+
 
 
 ---
