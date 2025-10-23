@@ -20,7 +20,7 @@ Official code for the **EMNLP 2025 main paper** 📄 ["Too Consistent to Detect:
 
 ---
 
-### Environment, Data, and Models
+### 1.Environment, Data, and Models
 
 #### Install
 ```bash
@@ -42,7 +42,7 @@ We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it
 * **Response model** (produces answers & hidden states):[Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
 * **Verifier model** (provides cross signals via hidden states):[Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
 
-### Quick Start: Cross-Model Probe
+### 2.Quick Start: Cross-Model Probe
 
 ```bash
 python3 code/cross-model_probe.py \
@@ -59,7 +59,7 @@ python3 code/cross-model_probe.py \
 
 ---
 
-### Explanation: What the Cross-Model Probe Does?
+### 3.Explanation: What the Cross-Model Probe Does?
 
 1. **Extract hidden states** from for each example from:
    * the **response model** (e.g., Llama-3.1-8B-Instruct), and
