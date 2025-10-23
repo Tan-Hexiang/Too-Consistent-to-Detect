@@ -32,7 +32,6 @@ class ProbeMethod:
         self.probe = torch.load(path)
 
     def save(self, path):
-         # 如果目录不存在，则创建目录
         dir_name = os.path.dirname(path)
         if not os.path.exists(dir_name):
             os.makedirs(dir_name, exist_ok=True)
