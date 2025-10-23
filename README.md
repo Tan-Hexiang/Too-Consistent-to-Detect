@@ -20,14 +20,14 @@ Official code for the **EMNLP 2025 main paper** 📄 ["Too Consistent to Detect:
 
 ---
 
-## Environment, Data, and Models
+### Environment, Data, and Models
 
-### Install
+#### Install
 ```bash
 pip install -r requirements.txt
 ````
 
-### Download the SCE dataset
+#### Download the SCE dataset
 
 * Google Drive (pre-built): **[link](https://drive.google.com/drive/folders/15EPDBtECAMHZfP4Gio8Mj3Io7iUjxiIm?usp=sharing)**
 * Includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
@@ -37,12 +37,12 @@ pip install -r requirements.txt
   * `inconsistent_incorrect.jsonl` contains inconsistent errors.
 
 
-### Models
+#### Models
 We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it with any other models.
 * **Response model** (produces answers & hidden states):[Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
 * **Verifier model** (provides cross signals via hidden states):[Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
 
-## Quick Start: Cross-Model Probe
+### Quick Start: Cross-Model Probe
 
 ```bash
 python3 code/cross-model_probe.py \
@@ -59,7 +59,7 @@ python3 code/cross-model_probe.py \
 
 ---
 
-## Explanation: What the Cross-Model Probe Does?
+### Explanation: What the Cross-Model Probe Does?
 
 1. **Extract hidden states** from for each example from:
    * the **response model** (e.g., Llama-3.1-8B-Instruct), and
@@ -73,7 +73,7 @@ python3 code/cross-model_probe.py \
 **Implementation note:** The core code lives in `cross-model_probe.py` (around lines **351–379**): it fits two probes (one per model’s hidden states) and **searches λ** to maximize dev performance before reporting test results.
 
 
-### Command-Line Arguments
+#### Command-Line Arguments
 
 * `--dataset`: Which subset to run on (e.g., `triviaqa-ce`, `sciq-ce`, `triviaqa-ie`, `sciq-ie`).
 * `--data_dir`: Root folder of the downloaded SCE dataset.
@@ -87,7 +87,7 @@ python3 code/cross-model_probe.py \
 
 ---
 
-## Citation
+### Citation
 
 If you find this work useful, please cite:
 
