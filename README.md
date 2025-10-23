@@ -6,7 +6,7 @@ Official code for the **EMNLP 2025 main paper** 📄 ["Too Consistent to Detect:
 - They are **hard to detect** for current error detection methods.
 
 **This repo provide:**
-- 🧩 Curated dataset of **Self-consistent errors**, and matched correct, inconsistent errors samples.  
+- 🧩 Curated dataset of **Self-consistent errors**, and matched correct, inconsistent error samples.  
 - 🔍 A simple yet effective **cross-model probe** to improve the detection of self-consistent errors.
 
 
