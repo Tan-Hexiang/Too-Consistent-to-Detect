@@ -1,13 +1,25 @@
 
 # Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs
 
-Code for the EMNLP 2025 main paper **“Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs.”**  
-We reveal the critical problem of self-consistent errors, which is 
-Paper: [arXiv:2505.17656](https://arxiv.org/abs/2505.17656)
+Official code for the **EMNLP 2025 main paper**  
+📄 [Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs](https://arxiv.org/abs/2505.17656)
 
-> This repo provides:  
-> • A curated dataset of **self-consistent errors (SCEs)** with matched **inconsistent errors (IEs)** and **correct** samples.  
-> • A **cross-model probing** method that trains probes on hidden states from a *response model* and a *verifier model*, then **fuses** them with a tuned weight λ to detect SCEs.
+> We reveal a critical problem of LLMs: **Self-consistent errors (SCEs)**, because 
+> their frequency stays stable or even **increases** as models scale.  
+> they are **hard to detect** for current error detection methods.
+
+
+
+<p align="center">
+  <img src="figure/sce.png" alt="Self-consistent error illustration" width="75%">
+  <br>
+  <em>Figure: Illustration of self-consistent errors and cross-model probing.</em>
+</p>
+
+**This repo provide:**
+- 🧩 Curated dataset of **Self-consistent errors**, and matched correct, inconsistent errors samples.  
+- 🔍 A simple yet effective **cross-model probe** to improve the detection of self-consistent errors.
+
 
 ---
 
