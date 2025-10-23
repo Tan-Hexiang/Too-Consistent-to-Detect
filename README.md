@@ -1,19 +1,17 @@
 
 # Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs
 
-Official code for the **EMNLP 2025 main paper**  
-📄 [Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs](https://arxiv.org/abs/2505.17656)
+Official code for the **EMNLP 2025 main paper** 📄 ["Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs"](https://arxiv.org/abs/2505.17656)
 
-> We reveal a critical problem of LLMs: **Self-consistent errors (SCEs)**, because 
-> their frequency stays stable or even **increases** as models scale.  
-> they are **hard to detect** for current error detection methods.
+We reveal a critical problem of LLMs: **Self-consistent errors (SCEs)** 
+> Their frequency stays stable or even **increases** as models scale.  
+> They are **hard to detect** for current error detection methods.
 
 
 
 <p align="center">
   <img src="figure/sce.png" alt="Self-consistent error illustration" width="75%">
   <br>
-  <em>Figure: Illustration of self-consistent errors and cross-model probing.</em>
 </p>
 
 **This repo provide:**
