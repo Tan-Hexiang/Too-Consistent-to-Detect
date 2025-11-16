@@ -27,19 +27,16 @@ Official code for the **EMNLP 2025 main paper** 📄 ["Too Consistent to Detect:
 pip install -r requirements.txt
 ````
 
-#### Download the SCE dataset
+#### Models and Datasets
+We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it with any other models.
+* **Response model** (produces answers & hidden states):[Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
+* **Verifier model** (provides cross signals via hidden states):[Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
 
-* **[Google Drive](https://drive.google.com/drive/folders/15EPDBtECAMHZfP4Gio8Mj3Io7iUjxiIm?usp=sharing)** includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
+"data" includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
 * For each subset (CE / IE), the sample count is **matched** for fair comparison.
   * `correct.jsonl` contains the correct responses.
   * `consistent_incorrect.jsonl` contains self-consistent errors
   * `inconsistent_incorrect.jsonl` contains inconsistent errors.
-
-
-#### Models
-We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it with any other models.
-* **Response model** (produces answers & hidden states):[Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
-* **Verifier model** (provides cross signals via hidden states):[Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
 
 ### 2. Quick Start: Cross-Model Probe
 
