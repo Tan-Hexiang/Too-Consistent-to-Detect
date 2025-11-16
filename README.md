@@ -32,7 +32,7 @@ We use Qwen2.5-14B-Instruct as the verifier in the paper, and you can replace it
 * **Response model** (produces answers & hidden states):[Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
 * **Verifier model** (provides cross signals via hidden states):[Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct)
 
-"data" includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
+`\data` includes SCE splits constructed for `llama3.1-8b-instruct` and `Qwen2.5-8b-instruct`.
 * For each subset (CE / IE), the sample count is **matched** for fair comparison.
   * `correct.jsonl` contains the correct responses.
   * `consistent_incorrect.jsonl` contains self-consistent errors
