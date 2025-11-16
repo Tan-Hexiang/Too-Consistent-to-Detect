@@ -88,13 +88,32 @@ python3 code/cross-model_probe.py \
 If you find this work useful, please cite:
 
 ```bibtex
-@misc{tan2025consistentdetectstudyselfconsistent,
-      title={Too Consistent to Detect: A Study of Self-Consistent Errors in LLMs}, 
-      author={Hexiang Tan and Fei Sun and Sha Liu and Du Su and Qi Cao and Xin Chen and Jingang Wang and Xunliang Cai and Yuanzhuo Wang and Huawei Shen and Xueqi Cheng},
-      year={2025},
-      eprint={2505.17656},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2505.17656}, 
+@inproceedings{tan-etal-2025-consistent,
+    title = "Too Consistent to Detect: A Study of Self-Consistent Errors in {LLM}s",
+    author = "Tan, Hexiang  and
+      Sun, Fei  and
+      Liu, Sha  and
+      Su, Du  and
+      Cao, Qi  and
+      Chen, Xin  and
+      Wang, Jingang  and
+      Cai, Xunliang  and
+      Wang, Yuanzhuo  and
+      Shen, Huawei  and
+      Cheng, Xueqi",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.238/",
+    doi = "10.18653/v1/2025.emnlp-main.238",
+    pages = "4755--4765",
+    ISBN = "979-8-89176-332-6",
+    abstract = "As large language models (LLMs) often generate plausible but incorrect content, error detection has become increasingly critical to ensure truthfulness.However, existing detection methods often overlook a critical problem we term as **self-consistent error**, where LLMs repeatedly generate the same incorrect response across multiple stochastic samples.This work formally defines self-consistent errors and evaluates mainstream detection methods on them.Our investigation reveals two key findings: (1) Unlike inconsistent errors, whose frequency diminishes significantly as the LLM scale increases, the frequency of self-consistent errors remains stable or even increases.(2) All four types of detection methods significantly struggle to detect self-consistent errors.These findings reveal critical limitations in current detection methods and underscore the need for improvement.Motivated by the observation that self-consistent errors often differ across LLMs, we propose a simple but effective \textit{cross{-}model probe} method that fuses hidden state evidence from an external verifier LLM.Our method significantly enhances performance on self-consistent errors across three LLM families."
 }
 ```
