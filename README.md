@@ -53,18 +53,6 @@ python3 code/cross-model_probe.py \
   --save_dir /path/you/want/to/save
 ```
 
----
-
-### 3. Explanation: What the Cross-Model Probe Does?
-
-1. **Extract hidden states** from for each example from:
-   * the **response model** (e.g., Llama-3.1-8B-Instruct), and
-   * the **verifier model** (e.g., Qwen2.5-14B-Instruct).
-2. **Train a lightweight probe** (including selecting the best layer to use) **separately** on each model’s hidden representation to predict correctness vs. error.
-3. **Fuse** the two probe scores with a scalar **λ** chosen on a dev set.
-
-**Implementation note:** The core code lives in `cross-model_probe.py` (around lines **351–379**): it fits two probes (one per model’s hidden states) and **searches λ** to maximize dev performance before reporting test results.
-
 
 #### Command-Line Arguments
 
@@ -77,6 +65,19 @@ python3 code/cross-model_probe.py \
 * `--method`: Set to `probe` to enable the cross-model probe pipeline.
 * `--seed`: Random seed for reproducibility.
 * `--save_dir`: Output directory for logs, metrics, and artifacts.
+
+---
+
+### 3. Explanation: What the Cross-Model Probe Does?
+
+1. **Extract hidden states** from for each example from:
+   * the **response model** (e.g., Llama-3.1-8B-Instruct), and
+   * the **verifier model** (e.g., Qwen2.5-14B-Instruct).
+2. **Train a lightweight probe** (including selecting the best layer to use) **separately** on each model’s hidden representation to predict correctness vs. error.
+3. **Fuse** the two probe scores with a scalar **λ** chosen on a dev set.
+
+**Implementation note:** The core code lives in `cross-model_probe.py` (around lines **351–379**): it fits two probes (one per model’s hidden states) and **searches λ** to maximize dev performance before reporting test results.
+
 
 ---
 
